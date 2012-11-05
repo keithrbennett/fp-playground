@@ -72,3 +72,7 @@ transformations = [
 transform_chain = chain.(*transformations)
 result = transform_chain.('favorites.txt')
 puts "#{LINE_SEPARATOR}\nUsing transform chain, we get:\n#{result}."
+
+# Or, more succinctly:
+result = chain.(*transformations).('favorites.txt')
+puts "#{LINE_SEPARATOR}\nUsing transform chain, we get:\n#{result}."
