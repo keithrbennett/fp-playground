@@ -44,7 +44,7 @@ first_line = firster.(read_file_lines.(__FILE__))
 puts "#{LINE_SEPARATOR}\nThis script's first line is:\n#{first_line}"
 
 write_file = ->(filespec, contents) { File.write(filespec, contents) }
-write_file.('favorites.txt', "fruit,mango")
+write_file.('favorites.txt', 'fruit,mango')
 
 parse_csv = ->(string) { string.split(',') }
 
